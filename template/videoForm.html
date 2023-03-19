@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/create.css">
+    <link rel="stylesheet" href="../CSS/normalice.css">
+    <link rel="stylesheet" href="../CSS/videoForm.css">
+    
+    <title>Agregar Nuevo video</title>
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <figure class="header__figure">
+                <a href="/index.html">
+                    <img src="../assets/youtube.png" alt="Logo Youtube">
+                </a>
+            </figure>
+
+            <ul class="header__list">
+                <li>
+                    <a href="../template/create.html"><img src="../assets/add.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="">test</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="" id="form">
+            <h2 class="form__title">Agregar video</h2>
+            
+            <div class="form__container">
+                <label class="form__label" for="image">Imagen</label>
+                <input class="form__input" type="url" id="image" placeholder="Ingrese el Link de la Miniatura" required>
+
+                <label class="form__label" for="name">Nombre</label>
+                <input class="form__input" type="text" id="name" placeholder="Ingrese el nombre del video" required>
+
+                <label class="form__label" for="number">vistas del video</label>
+                <input class="form__input" type="number" id="number" placeholder="Ingrese las vistas del video" required>
+                
+                <label class="form__label" for="time">Tiempo del video</label>
+                <input class="form__input" type="text" id="time" placeholder="Tiempo que lleva el video" required>
+
+                <label for="category">Categoría</label>
+                <select class="form__select" id="category">
+                    <option value="">Seleccione un opción</option>
+                    <option value="games">Videojuegos</option>
+                    <option value="developer">Serie de TV</option>
+                    <option value="movies">Programación</option>
+                </select>
+                <button class="form__submit" type="submit">Agregar video</button>
+            </div>
+        </form>
+    </main>
+    
+    <script src="../JS/videoForm.js" type="module"></script>
+</body>
+</html>
