@@ -65,3 +65,50 @@ categories.forEach((item) => {
           printVideos(containerCards, filterVideos);
     });
 });
+
+//---------Búsqueda de personajes por nombre..
+const filterByName = (termSearch, videoList) => {
+    const filterVideos = videoList.filter((vid) => 
+    vid.name.toLowerCase().includes(termSearch.toLowerCase())
+    );
+    const result = filterVideos.length
+        ? filterVideos
+        : videoList;
+
+    const messageResult = filterVideos.length
+        ? false
+        : "No existe este Video";
+
+    return {
+        resultSearch: result,
+        messageSearch: messageResult,
+      };
+};
+
+const formSearch = document.querySelector(".search-bar");
+
+formSearch.addEventListener("sumit", (e) => {
+    e.preventDefault();
+
+    console.log(formSearch.children);
+
+    const formChildren = Array.from(formSearch.children);
+
+    const inputSearch = formChildren.find((item) => item.localName === "input");
+
+    console.log(inputSearch.value);
+
+    const searchTerm = inputSearch.value;
+    if (searchTerm) {
+        const searchResult = filterByName(searchTerm, videos);
+        console.log(searchResult);
+
+        printVideos(containerCards, searchResult, resultSearch)
+
+        if (searchResult.messageSearch) {
+            swal.fire("Oops!", searchResult.messageSearch, "error");
+        }
+    } else {
+        swal.fire("Oops!", "No ingresastes un video", "error");
+    }
+});

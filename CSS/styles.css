@@ -13,8 +13,6 @@ body {
 
 /* nav */
 .header__nav{
-    margin: 5;
-    padding: 5;
     display: flex;
     padding: 10px 0;
     justify-content: space-between;
@@ -22,7 +20,7 @@ body {
 }
 
 .header__figure img{
-    width: 150px;
+    width: 180px;
 }
 
 .header__list{
@@ -62,10 +60,10 @@ body {
     padding: 5px 10px;
     font-family: 'Poppins', sans-serif;
     border: none;
-    color: #ccc;
+    color: #f1f1f1;
     background-color: #343434;
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     cursor: pointer;
 }
@@ -117,3 +115,4 @@ body {
     margin-top: 6px;
     font-size: 13px;
 }
+

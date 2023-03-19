@@ -97,12 +97,16 @@ body {
 }
 
 .form__submit{
-    background: #3866f2;
-    color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 1rem;
     padding: .8em 0;
-    border: none;
+    border: 2px solid black;
     border-radius: .5em;
+    cursor: pointer;
+}
+
+.form__submit:hover {
+    background-color: black;
+    color: #fff;
 }
