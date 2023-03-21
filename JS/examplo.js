@@ -4,7 +4,7 @@ const videos = JSON.parse(sessionStorage.getItem("videos")) || youtubeVideo;
 
 //Agregaremos el contenido deseado: 1. video del contenedor
 const videoPlayerInfo = (contenedor, video) => {
-    const figure = document.createElement("figure");
+    const figure = documen.createElement("figure");
     figure.classList.add("main__figure");
     figure.innerHTML = `<iframe class="card__video" src=${video.link} alt=${video.name}> </iframe>`;
     contenedor.appendChild(figure);

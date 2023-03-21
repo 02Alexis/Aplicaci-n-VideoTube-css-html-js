@@ -67,27 +67,28 @@ categories.forEach((item) => {
 });
 
 //---------Búsqueda de personajes por nombre..
-const filterByName = (termSearch, videoList) => {
-    const filterVideos = videoList.filter((vid) => 
-    vid.name.toLowerCase().includes(termSearch.toLowerCase())
+const filterByName = (termSearch,videosList) => {
+    const filterVideos = videosList.filter((video) => 
+    video.name.toLowerCase().includes(termSearch.toLowerCase())
     );
-    const result = filterVideos.length
-        ? filterVideos
-        : videoList;
+    
+    const result = filterVideos.length 
+    ? filterVideos 
+    : videosList;
 
     const messageResult = filterVideos.length
         ? false
-        : "No existe este Video";
+        : "No existe el video";
 
     return {
         resultSearch: result,
         messageSearch: messageResult,
-      };
+    };
 };
 
 const formSearch = document.querySelector(".search-bar");
 
-formSearch.addEventListener("sumit", (e) => {
+formSearch.addEventListener("submit", (e) => {
     e.preventDefault();
 
     console.log(formSearch.children);
@@ -99,16 +100,13 @@ formSearch.addEventListener("sumit", (e) => {
     console.log(inputSearch.value);
 
     const searchTerm = inputSearch.value;
+
     if (searchTerm) {
+
         const searchResult = filterByName(searchTerm, videos);
+
         console.log(searchResult);
 
-        printVideos(containerCards, searchResult, resultSearch)
-
-        if (searchResult.messageSearch) {
-            swal.fire("Oops!", searchResult.messageSearch, "error");
-        }
-    } else {
-        swal.fire("Oops!", "No ingresastes un video", "error");
+        printVideos(containerCards, searchResult.resultSearch);
     }
 });

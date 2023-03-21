@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #0f0f0f;
+    color: #ccc;
 }
 body {
     padding: 0 50px;
@@ -34,45 +35,84 @@ body {
     height: 40px;    
 }
 
-.header__list li a{
-    color: #fff;
-    text-decoration: none;
-}
-
-.header__list li a:hover{
-    font-weight: 800;
-}
-
 /* main */
-h1{
-    color: #ccc;
-}
-
-.main__figure{
-    width: 60%;
-}
-
-.main__figure img{
-    width: 100%;
-    height: auto;
-}
-.main__list{
-    list-style: none;
-}
-.main__list li{
-    text-transform: capitalize;
-    font-size: 20px;
-}
-
 .main{
-    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
 }
 
-#information{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.card__video{
+    width: 953px;
+    height: 480px;
 }
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.cards .cards__image {
+    width: 258px;
+    height: 144px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.cards .flex-div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+}
+.cards .flex-div img{
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cards__name{
+    color: #cfcfcf;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+}
+
+.cards__views{
+    color: #aaa;
+    margin-left: 45px;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+
+
+/* buttons */
+
+.main__buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.main__buttons button{
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    color: #f1f1f1;
+    background-color: #343434;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main__buttons button:hover{
+    background-color: #474646;
+    color: #fff;
+}
+

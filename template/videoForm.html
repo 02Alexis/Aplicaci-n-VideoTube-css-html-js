@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="../assets/youtube.ico">
     <link rel="stylesheet" href="../CSS/normalice.css">
     <link rel="stylesheet" href="../CSS/videoForm.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <title>Agregar Nuevo video</title>
     
@@ -22,34 +23,21 @@
                     <img src="../assets/youtube.png" alt="Logo Youtube">
                 </a>
             </figure>
-
-            <ul class="header__list">
-                <li>
-                    <a href="../template/create.html"><img src="../assets/add.svg" alt=""></a>
-                </li>
-                <li>
-                    <a href="">test</a>
-                </li>
-            </ul>
         </nav>
     </header>
 
     <main>
-        <form action="" id="form">
+        <form id="form">
             <h2 class="form__title">Agregar video</h2>
             
-            <div class="form__container">
-                <label class="form__label" for="image">Imagen</label>
-                <input class="form__input" type="url" id="image" placeholder="Ingrese el Link de la Miniatura" required>
+                <label class="form__label" for="thumbnail">Imagen</label>
+                <input class="form__input" type="url" id="thumbnail" placeholder="Ingrese el Link de la Miniatura">
 
                 <label class="form__label" for="name">Nombre</label>
-                <input class="form__input" type="text" id="name" placeholder="Ingrese el nombre del video" required>
+                <input class="form__input" type="text" id="name" placeholder="Ingrese el nombre del video">
 
-                <label class="form__label" for="link">Link del video</label>
-                <input class="form__input" type="url" id="link" placeholder="Ingrese el Link del Video" required>
-
-                <label class="form__label" for="number">vistas del video</label>
-                <input class="form__input" type="number" id="number" placeholder="Ingrese las vistas del video" required>
+                <label class="form__label" for="views">vistas del video</label>
+                <input class="form__input" type="number" id="views" placeholder="Ingrese las vistas del video">
                                
                 <label for="category">Categoría</label>
                 <select class="form__select" id="category">
@@ -59,7 +47,7 @@
                     <option value="movies">Peliculas</option>
                 </select>
                 <button class="form__submit" type="submit">Agregar video</button>
-            </div>
+            
         </form>
     </main>
     
