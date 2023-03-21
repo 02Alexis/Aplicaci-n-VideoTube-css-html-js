@@ -6,11 +6,11 @@ const videos = JSON.parse(sessionStorage.getItem("videos")) || youtubeVideo;
 const videoPlayerInfo = (contenedor, video) => {
     const figure = document.createElement("figure");
     figure.classList.add("main__figure");
-    figure.innerHTML = `<iframe class="card__video" src=${video.link} alt=${video.name}> </iframe>`;
+    figure.innerHTML = `<iframe frameborder="0" allow="autoplay" class="card__video" src=${video.link} alt=${video.name}> </iframe>`;
     contenedor.appendChild(figure);
 
     //Insertar la info complementaria
-    const list =document.createElement("ul");
+    const list =document.createElement("ul");   
     list.classList.add('main__list');
     for (const key in video.seenIn) {
         console.log(key, " --->", video.seenIn[key]);

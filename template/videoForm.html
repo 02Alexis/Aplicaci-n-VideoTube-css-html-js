@@ -30,23 +30,32 @@
         <form id="form">
             <h2 class="form__title">Agregar video</h2>
             
-                <label class="form__label" for="thumbnail">Imagen</label>
-                <input class="form__input" type="url" id="thumbnail" placeholder="Ingrese el Link de la Miniatura">
+            <label class="form__label" for="name">Nombre</label>
+            <input class="form__input" type="text" id="name" placeholder="Ingrese el nombre del video">
+            
+            <label class="form__label" for="link">Video</label>
+            <input class="form__input" type="url" id="link" placeholder="Ingrese el Link del Video">
+            
+            <label class="form__label" for="thumbnail">Miniatura del Video</label>
+            <input class="form__input" type="url" id="thumbnail" placeholder="Ingrese la Miniatura del Video">
+            
+            <label class="form__label" for="img">Miniatura del Canal</label>
+            <input class="form__input" type="url" id="img" placeholder="Ingrese la Imagen del Canal">
+            
+            <label class="form__label" for="autor">Nombre del Canal</label>
+            <input class="form__input" type="text" id="autor" placeholder="Ingrese el nombre del Canal">
 
-                <label class="form__label" for="name">Nombre</label>
-                <input class="form__input" type="text" id="name" placeholder="Ingrese el nombre del video">
-
-                <label class="form__label" for="views">vistas del video</label>
-                <input class="form__input" type="number" id="views" placeholder="Ingrese las vistas del video">
-                               
-                <label for="category">Categoría</label>
-                <select class="form__select" id="category">
-                    <option value="">Seleccione un opción</option>
-                    <option value="games">Videojuegos</option>
-                    <option value="developer">Programación</option>
-                    <option value="movies">Peliculas</option>
-                </select>
-                <button class="form__submit" type="submit">Agregar video</button>
+            <label class="form__label" for="views">visualizaciones</label>
+            <input class="form__input" type="text" id="views" placeholder="Ingrese el Número de Visualizaciones del video">
+                            
+            <label for="category">Categoría</label>
+            <select class="form__select" id="category">
+                <option value="">Seleccione un opción</option>
+                <option value="games">Videojuegos</option>
+                <option value="developer">Programación</option>
+                <option value="movies">Peliculas</option>
+            </select>
+            <button class="form__submit" type="submit">Agregar video</button>
             
         </form>
     </main>

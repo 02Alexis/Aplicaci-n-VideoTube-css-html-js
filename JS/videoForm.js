@@ -14,8 +14,11 @@ form.addEventListener("submit", (e) => {
     );
 
     const newVideo = {
+        name: "",       
+        link: "",
         thumbnail: "",
-        name: "",
+        img: "",
+        autor: "",
         views: "",
         seenIn: {
             category: "",
