@@ -2,8 +2,8 @@
 
 
 *{
-    margin: 10;
-    padding: 10;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box; 
 
     /* margin: 10;
@@ -29,8 +29,7 @@ body {
 }
 
 .header__figure img{
-    width: 150px;
-    height: 40px;
+    width: 180px;
 }
 
 /* form */
